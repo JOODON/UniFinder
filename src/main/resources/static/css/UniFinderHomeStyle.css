@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "KoPubWorld Dotum Bold";
+    src: url("../fonts/KoPubWorld Dotum Bold.ttf");
+}
+
+body {
+    font-family: "KoPubWorld Dotum Bold", serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 40%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: calc(100% - 330px);
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "KoPubWorld Dotum Bold", serif;
+
+}
+#search-bar-delimiter{
+    width: calc(100% - 200px);
+    margin-top: 40px;
+
+}
+
+button {
+    width: 100px;
+    padding: 15px;
+    background-color: #228B22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "KoPubWorld Dotum Bold", serif;
+}
+
+button:hover {
+    background-color: #228B22;
+}
+
+#result-container {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+.filter-container{
+    display: none;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+#results-list {
+    list-style-type: none;
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+#results-list li {
+    padding: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+    border-left: 3px solid #228B22;
+    margin-top: 3px;
+}
+#results-list li button {
+    list-style-type: none;
+    width: 20%;
+    float: right;
+    padding: 5px;
+}
+#pagination-container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#pagination-container button{
+    background-color: white;
+    color: black;
+    width: 5px;
+}
+#results-list li:last-child {
+    border-bottom: none;
+}
+.map-container{
+    opacity: 0; /* 초기에 투명하게 설정 */
+
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
